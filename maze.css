@@ -1,0 +1,57 @@
+/*comment*/
+
+body{
+    text-align: center;
+    background-color:black;
+}
+
+
+td{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    background-color: burlywood;
+}
+
+table{     
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: black 4px solid;
+    margin: 20px;
+    position: fixed;
+    top: 5vh;
+    left: 30vw;
+    
+}
+
+.block{
+    table-layout: auto;
+    text-align: center;
+    background-color: black;
+}
+
+#lives{
+    position: fixed;
+    top: 10vh;
+    right: 70vw;
+    font-size: 200%;
+    font-weight: bold;
+    color: white;
+    padding: 2%;
+    border: white 3px solid
+}
+
+#anime{
+    position: fixed;
+
+    color: white;
+    font-size: 200%;
+    font-weight: bold;
+    top: -50px;
+    left: 50vw;
+}
+#tim{
+    font-size: 200%;
+    font-weight: bold;
+    color: white;
+}
