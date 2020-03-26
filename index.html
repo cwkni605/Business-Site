@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Maze Game</title>
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/maze.css">
-        <link rel="icon" href="images/Logo.png" type="image/x-icon">
-    </head>
-    <body onkeydown="bone(specificKey(event))">
-        <!--Screen Visuals-->
-        <p id="screen">screen</p>
-        <!--Lives Visuals-->
-        <p id="lives"></p>
-        <!--End Screen Visuals-->
-        <p id="anime">The story of you ended with a terrible scream...</p>
-        <p id="tim"></p>
-    </body>
-    <script src="js/maze js.js"></script>
-</html>
+    <html>
+        <head>
+        <!-- Author: connor Knight -->
+            <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="CSS/headerCSS.css">
+            <link rel="stylesheet" type="text/css" href="CSS/sitelist layout.css">
+            <title>Foods, Wardrobe, and Weapons</title>
+        </head>
+
+        <body>
+            <header>
+                <ul>
+                    <li><a href="nope.html">Home</a></li>
+                    <li><a href="nope.html">Link</a></li>
+                    <li><a href="Store page.html">Shop</a></li>
+                    <li><a href="nope.html">Contact Us</a></li>
+                    <li><a href="nope.html">Jobs</a></li>
+                </ul>
+            </header>
+            <div id="sort">
+                <input type="text" id="search">
+                <button type="submit" onclick="searchName()">Search</button>
+                <button onclick="sortFood()">Foods</button>
+                <button onclick="sortWardrobe()">Wardrobe</button>
+                <button onclick="sortWeapons()">Weapons</button>
+            </div>
+            <div id="torso">
+            </div>
+            <footer>
+                <p>This Site was maintained by Connor Knight</p>
+            </footer>
+        </body>
+        <script src="siteJS.js"></script>
+    </html>

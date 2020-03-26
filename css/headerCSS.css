@@ -1,0 +1,179 @@
+@font-face{
+    font-family: 'plaza';
+    src:
+        url('fonts/Plaza/Plaza\ Regular.ttf') format('truetype');  
+} 
+@font-face{
+    font-family: 'open';
+    src: 
+        url('fonts/Open-SANS/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'righteous';
+    src: 
+        url('fonts/Righteous/Righteous-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'web';
+    src: 
+        url('fonts/TitilliumWeb/TitilliumWeb-Regular.ttf') format('truetype');
+}
+
+@media only screen and (min-width: 600px){
+
+    /*this is the header*/
+
+    header{
+        font-family: 'righteous';
+        margin: 2%;
+        background: rgba(95, 95, 95, 0.5);
+        border-radius: 10px;
+        padding: 5px;
+    }
+    
+    header li{
+        display: inline;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    header li a{
+        color: rgb(0, 0, 99);
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    header li a:hover{
+        border-radius: 5px;
+        background: rgba(211, 211, 211,0.2);
+    }
+
+    /*body background and font*/
+
+    body{
+        margin: 0px;
+        font-family: 'plaza';
+        background: linear-gradient(white , lightgray , white 10% , lightgray , white);
+    }
+
+    /*this is the footer*/
+
+    footer{
+        clear: both;
+        border-radius: 5px;
+        font-family: 'righteous';
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
+        background: rgba(104, 104, 104, 0.5);
+        color: rgb(68, 68, 68);
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+
+    /*this is the header*/
+
+    header{
+        font-family: 'righteous';
+        margin: 2%;
+        background: rgba(156, 156, 156, 0.5);
+        border-radius: 10px;
+        padding: 5px;
+    }
+    
+    header li{
+        display: inline;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    header li a{
+        color: rgb(0, 0, 99);
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    header li a:hover{
+        border-radius: 5px;
+        background: rgba(175, 175, 175, 0.5);
+    }
+
+    /*body background and font*/
+
+    body{
+        margin: 0px;
+        font-family: 'plaza';
+        background: linear-gradient(white , lightgray , white 10% , lightgray , white);
+    }
+
+    /*this is the footer*/
+
+    footer{
+        clear: both;
+        border-radius: 5px;
+        font-family: 'righteous';
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
+        background: rgba(100, 100, 100, 0.5);
+        color: rgb(68, 68, 68);
+    }
+
+}
+
+@media only screen and (min-width: 992px){
+    
+    /*this is the desktop header*/
+
+    header{
+        font-family: 'righteous';
+        margin: 2%;
+        background: rgba(156, 156, 156, 0.5);
+        border-radius: 10px;
+        padding: 5px;
+    }
+    
+    header li{
+        display: inline;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    header li a{
+        color: rgb(0, 0, 99);
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    header li a:hover{
+        border-radius: 5px;
+        background: rgb(214, 214, 214);
+    }
+
+    /*body background and font*/
+
+    body{
+        margin: 0px;
+        font-family: 'plaza';
+        background: linear-gradient(white , lightgray , white 10% , lightgray , white);
+    }
+
+    /*this is the desktop footer*/
+
+    footer{
+        border-radius: 5px;
+        font-family: 'righteous';
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
+        background: rgba(100, 100, 100, 0.5);
+        color: rgb(68, 68, 68);
+    }
+}

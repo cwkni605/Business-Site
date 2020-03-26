@@ -1,0 +1,152 @@
+@font-face{
+    font-family: 'plaza';
+    src:
+        url('fonts/Plaza/Plaza\ Regular.ttf') format('truetype');  
+} 
+@font-face{
+    font-family: 'open';
+    src: 
+        url('fonts/Open-SANS/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'righteous';
+    src: 
+        url('fonts/Righteous/Righteous-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'web';
+    src: 
+        url('fonts/TitilliumWeb/TitilliumWeb-Regular.ttf') format('truetype');
+}
+
+@media only screen and (min-width: 600px){
+
+    #torso a:visited{
+        color: black;
+    }
+
+    #torso a:hover,#torso a:link{
+        color: rgb(46, 46, 46);
+        text-decoration: none;
+    }
+
+    a:active{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    #torso{
+        width: 90%;
+        margin: auto;
+    }
+
+    #torso > div{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 900;
+        background: rgba(121, 121, 121, 0.507);
+        margin-bottom: 10px;
+    }
+
+    #torso > div img{
+        border-radius: 5px;
+    }
+
+    #torso > div:nth-of-type(odd){
+        border-radius: 5px;
+        clear: both;
+        width: 49%;
+        float: left;
+    }
+
+    #torso > div:nth-of-type(even){
+        border-radius: 5px;
+        width: 49%;
+        float: right;
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+
+    #torso{
+        width: 90%;
+        margin: auto;
+    }
+
+    #torso > div{
+        text-align: center;
+        font-size: 20px;
+        background: rgba(121, 121, 121, 0.507);
+        margin-bottom: 10px;
+    }
+
+    #torso > div img{
+        border-radius: 5px;
+    }
+
+    #torso > div:nth-of-type(odd){
+        border-radius: 5px;
+        clear: both;
+        width: 49%;
+        float: left;
+    }
+
+    #torso > div:nth-of-type(even){
+        border-radius: 5px;
+        width: 49%;
+        float: right;
+    }
+
+}
+
+@media only screen and (min-width: 992px){
+
+    #torso{
+        width: 90%;
+        margin: auto;
+    }
+
+    #torso > div{
+        text-align: center;
+        font-size: 20px;
+        background: rgba(121, 121, 121, 0.507);
+        margin-bottom: 10px;
+    }
+
+    #torso > div img{
+        height: 200px;
+        border-radius: 5px;
+    }
+
+    #torso > div:nth-of-type(odd){
+        border-radius: 5px;
+        clear: both;
+        width: 49%;
+        float: left;
+    }
+
+    #torso > div:nth-of-type(even){
+        border-radius: 5px;
+        width: 49%;
+        float: right;
+    }
+
+    #sort{
+        background-color: gray;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        width: 90%;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+    }
+
+    #sort > option{
+        width: 100px;
+    }
+
+}
