@@ -41,57 +41,35 @@ var p3={
   picture1:"images/python1.jpg",
   level:1
 };
-var f5={
+var t1={
   type:"testimony",
-  name:"HamBurger",
-  text:10,
-  picture1:"images/HamBurger1.png",
+  name:"Alice G.",
+  text:'"This is the best camp that I sent my kids to ever! They had a blast with their instructor!"',
+  picture1:"images/mom.png",
 };
-var f6={
+var t2={
   type:"testimony",
-  name:"Bread",
-  text:10,
-  picture1:"images/bread1.png",
+  name:"Connor T.",
+  text:'"They were so professional, and connected with the kids almost intantly!"',
+  picture1:"images/dad.png",
 };
-var f7={
+var t3={
   type:"testimony",
-  name:"Chicken Pot Pie",
-  text:10,
-  picture1:"images/chickenpotpie1.png",
+  name:"Alex E.",
+  text:'"They were clean and very organized, and I have no problem leaving my kid here all day."',
+  picture1:"images/mom2.png",
 };
-var f8={
+var t4={
   type:"testimony",
-  name:"Cookie",
-  text:2.50,
-  picture1:"images/cookie1.png",
-};
-var f9={
-  type:"testimony",
-  name:"Jello",
-  text:2,
-  picture1:"images/jello1.png",
-};
-var f10={
-  type:"testimony",
-  name:"water",
-  text:0.50,
-  picture1:"images/water1.png",
-};
-var f11={
-  type:"testimony",
-  name:"Orange Juice",
-  text:3,
-  picture1:"images/orangejuice1.png",
-};
-var f12={
-  type:"testimony",
-  name:"bait",
-  text:5,
-  picture1:"images/bait1.png",
+  name:"Greg J.",
+  text:'"It was easy to contact the administration, and they answered all of my questions with out fail!"',
+  picture1:"images/dad2.png",
 };
 var list = [
-  j1,j2,j3,p1,f5,f6,f7,f8,f9,f10,f11,f12
+  j1,j2,j3,p1,p2,p3,t1,t2,t4,t3
 ];
+
+var active = false;
 
 var out = "";
 
@@ -99,11 +77,11 @@ for(var i = 0; i < list.length;i++)
 {
   if(list[i].type == "course")//checks to see if the item is a course then adds it
   {
-    out = out+"<div class='course' ><a href='"+ list[i].link +"'><img onmouseleave='imgReturn(this)' onmouseover='imgChange(this)' src='"+list[i].picture1+"' alt='"+list[i].name+"'><br><p>"+list[i].name+" $"+list[i].price+"</p></a></div>";
+    out = out+"<div style='background-image: url("+list[i].picture1+");' class='course' ><a href='"+ list[i].link +"'><img onmouseleave='imgReturn(this)' onmouseover='imgChange(this)' src='images/image_thats_not_an_image.png' alt='"+list[i].name+"'><br><p>"+list[i].name+" $"+list[i].price+"</p></a></div>";
   }
   if(list[i].type == "testimony" && list[i-1].type == "course")//checks to see if the previos item was a course and the current item is a testimonial then adds it
   {
-    out += "<hr class='divider'>";
+    out += "<div class='divider'><h1>Testimonials</h1></div>";
     out = out+"<div class='testimony'><a><img onmouseleave='imgReturn(this)' onmouseover='imgChange(this)' src='"+list[i].picture1+"' alt='"+list[i].name+"'><br><p>"+list[i].name+"<br>"+list[i].text+"</p></a></div>";
   }
   else if(list[i].type=="testimony")//checks to see if the previos item was a course and the current item is a testimonial then adds it
@@ -120,7 +98,7 @@ function sortFood()
   {
     if(list[i].type=="testimony")
     {
-      out = out+"<div class='testimony'><a><img onmouseleave='imgReturn(this)' onmouseover='imgChange(this)' src='"+list[i].picture1+"' alt='"+list[i].name+"'><br><p>"+list[i].name+" $"+list[i].price+"</p></a></div>";
+      out = out+"<div class='testimony'><a><img onmouseleave='imgReturn(this)' onmouseover='imgChange(this)' src='"+list[i].picture1+"' alt='"+list[i].name+"'><br><p>"+list[i].name+"<br>"+list[i].text+"</p></a></div>";
     }
   }
   document.getElementsByClassName("id").src="../template/save.png";
@@ -158,9 +136,9 @@ function searchName()
   var toPrint="";
   for(var i = 0; i<list.length;i++)
   {
-    if(list[i].name==document.getElementById("search").value)
+    if(list[i].name==document.getElementById("search").value && list[i].type != "testimony")//prints the specific item
     {
-      toPrint = "<div><a href='"+ list[i].link +"'><img src='"+list[i].picture1+"' alt='"+list[i].name+"'><br><p>"+list[i].name+" $"+list[i].price+"</p></a></div>";
+      toPrint = "<div style='background-image: url("+list[i].picture1+");' class='course' ><a href='"+ list[i].link +"'><img onmouseleave='imgReturn(this)' onmouseover='imgChange(this)' src='images/image_thats_not_an_image.png' alt='"+list[i].name+"'><br><p>"+list[i].name+" $"+list[i].price+"</p></a></div>";
       document.getElementById("torso").innerHTML = toPrint;
     }
     else if(document.getElementById("search").value=="")
@@ -168,7 +146,19 @@ function searchName()
       var out = "";
       for(var i = 0; i<list.length;i++)
       {
-        out = out+"<div><a href='"+ list[i].link +"'><img onmouseleave='imgReturn(this)' onmouseover='imgChange(this)' src='"+list[i].picture1+"' alt='"+list[i].name+"'><br><p>"+list[i].name+" $"+list[i].price+"</p></a></div>";
+        if(list[i].type == "course")//checks to see if the item is a course then adds it
+        {
+          out = out+"<div style='background-image: url("+list[i].picture1+");' class='course' ><a href='"+ list[i].link +"'><img onmouseleave='imgReturn(this)' onmouseover='imgChange(this)' src='images/image_thats_not_an_image.png' alt='"+list[i].name+"'><br><p>"+list[i].name+" $"+list[i].price+"</p></a></div>";
+        }
+        if(list[i].type == "testimony" && list[i-1].type == "course")//checks to see if the previos item was a course and the current item is a testimonial then adds it
+        {
+          out += "<div class='divider'><h1>Testimonials</h1></div>";
+          out = out+"<div class='testimony'><a><img onmouseleave='imgReturn(this)' onmouseover='imgChange(this)' src='"+list[i].picture1+"' alt='"+list[i].name+"'><br><p>"+list[i].name+"<br>"+list[i].text+"</p></a></div>";
+        }
+        else if(list[i].type=="testimony")//checks to see if the previos item was a course and the current item is a testimonial then adds it
+        {
+          out = out+"<div class='testimony'><a><img onmouseleave='imgReturn(this)' onmouseover='imgChange(this)' src='"+list[i].picture1+"' alt='"+list[i].name+"'><br><p>"+list[i].name+"<br>"+list[i].text+"</p></a></div>";
+        }
       }
       document.getElementById("torso").innerHTML = out;
     }
@@ -191,7 +181,7 @@ function imgReturn(input)
   {
     if(list[i].name==input.alt)
     {
-      input.src=list[i].picture1;
+      //input.src=list[i].picture1;
     }
   }
 }
@@ -203,7 +193,13 @@ function specificKey(event) // Checks if key is pressed
 }
 
 function keyDownEvents(theKey) {
-  if (theKey == "i") {
+  if (theKey == "" && active == false)
+  {
     document.body.style.filter= "invert()";
+    active = true;
+  }
+  else if(theKey == ""){
+    document.body.style.filter= "invert()";
+    active = false;
   }
 }

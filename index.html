@@ -3,33 +3,41 @@
         <head>
         <!-- Author: connor Knight -->
             <meta charset="UTF-8">
-            <link rel="stylesheet" type="text/css" href="CSS/headerCSS.css">
-            <link rel="stylesheet" type="text/css" href="CSS/sitelist layout.css">
-            <title>Foods, Wardrobe, and Weapons</title>
+            <link rel="stylesheet" type="text/css" href="CSS/headerCSS.css"><!--header and footer css-->
+            <link rel="stylesheet" type="text/css" href="CSS/index layout.css"><!--the rest of the css-->
+            <link rel="icon" href="images/icon.png" type="image/x-icon">
+            <title>How2Code Camp</title>
         </head>
 
         <body onkeydown="keyDownEvents(specificKey(event))">
-            <header>
+            <header><!--The header and links-->
                 <ul>
-                    <li><a href="nope.html">Home</a></li>
-                    <li><a href="nope.html">Link</a></li>
-                    <li><a href="Store page.html">Shop</a></li>
-                    <li><a href="nope.html">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="nope.html">Shop</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
                     <li><a href="nope.html">Jobs</a></li>
                 </ul>
             </header>
+            <img src="images/logo.png" alt="company logo">
+            <div id="camp-description"><!--The site description-->
+                <h1>Welcome parents and children to Camp!</h1>
+                <br>
+                <p>At How2Code Camp we teach work skills to children and young adults who wish to get into the programming field in a safe, one-on-one evironment.</p>
+            </div>
             <div id="sort">
                 <input type="text" id="search">
-                <button type="submit" onclick="searchName()">Search</button>
-                <button onclick="sortFood()">Foods</button>
-                <button onclick="sortWardrobe()">Wardrobe</button>
-                <button onclick="sortWeapons()">Weapons</button>
+                <button type="submit" onclick="searchName()">Search Course</button>
             </div>
-            <div id="torso">
+            <div id="torso"><!--course items and testimonials-->
             </div>
-            <footer>
+            <div id="waist"><!---->
+                
+            </div>
+            <footer><!--The footer-->
+                <img src="images/license.gif" alt="theTotalyLigitLicense">
                 <p>This Site was maintained by Connor Knight</p>
             </footer>
         </body>
-        <script src="siteJS.js"></script>
+        <script src="siteJS.js"></script><!--The js link-->
     </html>

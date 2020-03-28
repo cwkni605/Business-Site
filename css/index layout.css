@@ -1,0 +1,211 @@
+@font-face{
+    font-family: 'plaza';
+    src:
+        url('fonts/Plaza/Plaza\ Regular.ttf') format('truetype');  
+} 
+@font-face{
+    font-family: 'open';
+    src: 
+        url('fonts/Open-SANS/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'righteous';
+    src: 
+        url('fonts/Righteous/Righteous-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'web';
+    src: 
+        url('fonts/TitilliumWeb/TitilliumWeb-Regular.ttf') format('truetype');
+}
+
+/*body background and font*/
+
+body{
+    margin: 0px;
+    font-family: 'web';
+    background: rgb(88, 99, 145);
+    --item-Backgrounds: rgba(64, 226, 0, 0.781);
+}
+
+@media only screen and (min-width: 600px){
+
+    /*item and body link details*/
+    #torso a:hover{
+        color: black;
+    }
+
+    #torso a:visited,#torso a:link{/*link stuff*/
+        color: rgb(46, 46, 46);
+        text-decoration: none;
+    }
+
+    #torso{/*#torso positioning and width*/
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #torso > div{/*general item formating*/
+        text-align: center;
+        font-size: 20px;
+        font-weight: 900;
+        background: var(--item-Backgrounds);
+        margin-bottom: 10px;
+        color: black;
+        font-weight: 1000;
+    }
+
+    #torso > .course p{/*general item formating*/
+        color: black;
+        font-weight: 1000;
+        background-color: rgba(255, 255, 255, 0.87);
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
+        border: var(--item-Backgrounds) solid 2px;
+    }
+
+    #torso > .course p:hover{/*making p tags look like buttons*/
+        background-color: rgba(201, 201, 201, 0.87);
+    }
+
+    #torso > .course img{/*course item img formating*/
+        border-radius: 5px;
+    }
+
+    #torso > .testimony img{/*testimony item img formating*/
+        border-radius: 50%;
+    }
+
+    #torso > .course:nth-of-type(odd){/*course item altinator left*/
+        border-radius: 40px;
+        clear: both;
+        width: 44%;
+        float: left;
+    }
+
+    #torso > .course:nth-of-type(even){/*course item altinator right*/
+        border-radius: 40px;
+        width: 44%;
+        float: right;
+    }
+
+    .divider{/*the divider css*/
+        border-radius: 20px;
+        border-width: 0px;
+        background-color: var(--item-Backgrounds);
+        height: 100px;
+        clear: both;
+        width: 100%;
+    }
+
+    #torso > .testimony:nth-of-type(even){/*course item altinator left*/
+        border-radius: 30% 30% 20% 20%;
+        clear: both;
+        width: 49%;
+        float: left;
+    }
+
+    #torso > .testimony:nth-of-type(odd){/*course item altinator right*/
+        border-radius: 30% 30% 20% 20%;
+        width: 49%;
+        float: right;
+    }
+}
+
+
+@media only screen and (min-width: 992px){/*after this point it is a mess and merges with the one above to make the final document*/
+
+    #torso{
+        width: 70%;
+        margin: auto;
+    }
+
+    #torso > div{
+        text-align: center;
+        font-size: 20px;
+        /*background: var(--item-Backgrounds);*/
+        margin-bottom: 10px;
+        background-repeat: round;
+    }
+
+    #torso > div img{
+        height: 200px;
+        border-radius: 5px;
+    }
+
+    #sort{
+        background-color: rgba(51, 179, 0, 0.87);;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        width: 75%;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+    }
+
+    #sort > button, #sort > button:active{
+        width: 100px;
+        margin-left: 0.5%;
+        margin-right: 2%;
+        background-color: rgb(64, 226, 0);
+        border-width: 0px;
+        border-radius: 3px;
+        font-family: 'open';
+        height: 80%;
+        align-self: center;
+    }
+
+    #sort > button:hover{
+        background-color: rgb(55, 194, 0);
+        border-width: 1px;
+        border-color: rgb(64, 226, 0);
+    }
+
+    #sort > input{
+        height: 70%;
+        align-self: center;
+        border-radius: 2px;
+    }
+
+    #camp-description{
+        background-color: rgba(51, 179, 0, 0.87);;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        width: 70%;
+        height: 500px;
+        font-size: 30px;
+        text-align: center;
+        background-image: url(https://2018media.idtech.com/images/1571360699_social-impact-idtech-header.jpg?3d972b360f);
+        background-size: 100%;
+        background-repeat: round;
+        font-weight: 1000;
+    }
+
+    #camp-description > h1{
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    #camp-description > p{
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 13%;
+        background-color: rgba(51, 179, 0, 0.568);
+        border-radius: 10px;
+    }
+
+    body > img{
+        margin-left: 45%;
+        width: 10%;
+        margin-right: 45%;
+        border-radius: 47%;
+    }
+}
